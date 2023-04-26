@@ -1,0 +1,45 @@
+# for pre-commit
+pre-commit:
+  # 配置当前提交在特定分支上允许的文件类型，不需要检查的分支不用配
+  IncludeOnly:
+    # 需要做检查的分支名
+    art:
+      # 此分支允许提交的文件类型，其他类型文件都不允许提交
+      "*":
+        .asset: true
+        .fbx: true
+        .jpg: true
+        .mat: true
+        .meta: true
+        .png: true
+        .prefab: true
+        .tga: true
+        .shader: true
+      client/Assets/TempRes:
+        "*": true
+    art_city:
+      "*":
+        .asset: true
+        # 增加了cs文件
+        .cs: true
+        .fbx: true
+        .jpg: true
+        .mat: true
+        .meta: true
+        .png: true
+        .prefab: true
+        .tga: true
+        .shader: true
+    art_map:
+      "*":
+        .asset: true
+        .fbx: true
+        .jpg: true
+        .mat: true
+        .meta: true
+        .png: true
+        .prefab: true
+        .tga: true
+        .shader: true
+  # Unity生成的meta文件必须提交
+  UnityMeta: true
